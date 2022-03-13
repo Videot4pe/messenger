@@ -1,0 +1,32 @@
+@import '../../../variables.scss';
+
+.styled-input {
+  padding: 10px 30px;
+  background-color: #1f1d15;
+  border-radius: 20px;
+
+  &__label {
+    color: $labelPrimary;
+    font-size: 0.8rem;
+    margin-right: 10px;
+  }
+
+  &__input {
+    background-color: #1f1d15;
+    color: $inputPrimary;
+    font-size: 1rem;
+    border: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &--warn {
+    border: 1px solid red;
+  }
+}
+
+.alert-msg {
+  color: red;
+}

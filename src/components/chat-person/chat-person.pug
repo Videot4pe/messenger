@@ -1,0 +1,8 @@
+li(class='chat-person', class=active === chat.id ? 'chat-person--active' : null, id=chat.id)
+    .chat-person__friend-info(id=chat.id)
+        | !{avatar}
+        input(id='avatar_input', style="display: none", type='file')
+        .chat-person__friend-info__label(id=chat.id) #{chat.title}
+    .chat-person__btn-block(id=chat.id)
+        if chat.unread
+            | !{unreadBtn}

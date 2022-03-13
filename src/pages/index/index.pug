@@ -1,0 +1,17 @@
+.main-page 
+    ul.main-page__friends-list
+        div(style='width: 100%;')
+            | !{chatPerson}
+        li(class='main-page__new-chat')
+            div(class='margin: 10px;')
+                | !{titleInput}
+            .self-align-center
+                | !{plusBtn}
+        each chat, index in chats
+            div(style='width: 100%', id=chat.id)
+                | !{chatPersons[index]}
+    .main-page__chat-area(id='chat-area')
+        if active === person.id
+            | !{profile}
+        else 
+            | !{chatArea}

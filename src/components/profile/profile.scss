@@ -1,0 +1,42 @@
+@import '../../variables.scss';
+@import '../../common.scss';
+
+.profile {
+  &__block {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+
+    > * {
+      width: 300px;
+    }
+
+    &__avatar {
+      > div {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+
+  &__btn-block {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__image {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+}
+
+.checkmark {
+  display: inline-block;
+  transform: rotate(45deg);
+  height: 30px;
+  width: 15px;
+  border-bottom: 6px solid green;
+  border-right: 6px solid green;
+}

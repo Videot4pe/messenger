@@ -1,0 +1,23 @@
+.chat-container
+    .chat-container__header
+            .chat-container__header__select
+                select.user-list
+                    each user in users
+                        option #{user.display_name}
+            li(class='chat-container__header__btns')
+                .self-align-center
+                    | !{minusBtn}
+                div(class='margin: 10px;')
+                    | !{loginInput}
+                .self-align-center
+                    | !{plusBtn}
+    .scroll-area(id='scrollmessages')
+        each message, index in messages
+            .message-block(class=message.user_id == userId ? 'message-block--self' : null)
+                if (message.user_id != userId)
+                    | !{friendAvatar}
+                div 
+                    | !{messageAreas[index]}
+                if (message.user_id == userId)
+                    | !{selfAvatar}
+    | !{newMessageArea}
